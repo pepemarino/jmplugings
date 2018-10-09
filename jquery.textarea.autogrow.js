@@ -1,6 +1,6 @@
 ﻿/*
  * A jQuery plug in to autogrow a textearea
- * 
+ * this is jumpy
  */
 
 (function ($) {
