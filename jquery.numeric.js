@@ -1,5 +1,9 @@
 ﻿/*
- * A jQuery plug in to accept only decimal  
+ * A simple jQuery plug for numeric values.
+ * The plugin sets integers when the option isDecimal is set to false.
+ * The default value of isDecimal is false, hence this plugin by default accepts integers only
+ *
+ * Usage: $("#money").decimal({isDecimal: true});
  * 
  */
 
