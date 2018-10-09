@@ -40,8 +40,16 @@
 </div>
 
 <div class="col-sm-6" style="margin-bottom: 50px;">
+	<label for="account">Account Number</label>
 	<div class="input-group">                                
-		<input class="form-control " id="money" name="money" type="text" placeholder="numbers only" />			
+		<input class="form-control " id="account" name="account" type="text" placeholder="Account field is an integer" />			
+    </div>
+</div>
+
+<div class="col-sm-6" style="margin-bottom: 50px;">
+	<label for="money">Hourly Rate:</label>
+	<div class="input-group">                                
+		<input class="form-control " id="money" name="money" type="text" placeholder="Hourly Rate is a money field" />			
     </div>
 </div>
 
@@ -71,8 +79,10 @@
 
 </div>
     <script>		
-			$(function () {				
-				$("#money").decimal({isDecimal: false});				
+			$(function () {											
+				$("#money").numeric({ isDecimal : true });				
+				$("#account").numeric();
+				
 				$("#description").preventCharacter({ exclude: 39 });
 			    $(".description").autogrow({ maxHeight : 360 });
 				
