@@ -35,7 +35,7 @@
 
 <div class="col-sm-6" style="margin-bottom: 50px;">
 	<div class="input-group"> 
-		<textarea class="form-control description"  placeholder='Auto grow Textarea'>Hello this is a testa asd asd as da sd as da sd asdasdas sad as dasd asd a sdasd asd asda sdasd   asd  a sd as ds da sd a sd asd a sd as da s</textarea>
+		<textarea class="form-control description" row = 1 placeholder='Auto grow Textarea'></textarea>
     </div>
 </div>
 
@@ -74,7 +74,7 @@
 			$(function () {				
 				$("#money").decimal({isDecimal: false});				
 				$("#description").preventCharacter({ exclude: 39 });
-			    $(".description").autogrow({ minHeight : 150, maxHeight : 360 });
+			    $(".description").autogrow({ maxHeight : 360 });
 				
 				$('.datepicker').datepicker({
 					format: 'mm/dd/yyyy',
