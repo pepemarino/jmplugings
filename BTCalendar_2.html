@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 4 DatePicker</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>  
+	<script src="jquery.numeric.js"></script>
+	<script src="jquery.preventCharacter.js"></script>
+	<script src="jquery.textarea.autogrow.js"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js" type="text/javascript"></script>			
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+		.calbutton {
+			display: inline-block;
+			padding: 10px 15px;
+			font-size: 20px;
+			border-radius: 0;
+			-webkit-appearance: none;
+			border-top: 1px solid silver;
+			border-right: 1px solid silver;
+			border-bottom: 1px solid silver;
+		}
+	</style>
+
+</head>
+<body>
+
+
+
+<div class="container" style="margin-top: 20px;" >
+
+<div class="col-sm-6" style="margin-bottom: 50px;">
+	<div class="input-group"> 
+		<textarea class="form-control description"  placeholder='Auto grow Textarea'>Hello this is a testa asd asd as da sd as da sd asdasdas sad as dasd asd a sdasd asd asda sdasd   asd  a sd as ds da sd a sd asd a sd as da s</textarea>
+    </div>
+</div>
+
+<div class="col-sm-6" style="margin-bottom: 50px;">
+	<div class="input-group">                                
+		<input class="form-control " id="money" name="money" type="text" placeholder="numbers only" />			
+    </div>
+</div>
+
+<div class="col-sm-6" style="margin-bottom: 50px;">
+	<div class="input-group">                                
+		<input class="form-control " id="description" name="description" type="text" placeholder="Description of your problem" />			
+    </div>
+</div>
+
+<div class="col-sm-6">
+	<div class="input-group date datepicker">                                
+		<input class="form-control " id="BirthDate" name="BirthDate" type="text" placeholder="MM/dd/yyyy" />
+			<span class="input-group-btn">
+			<button type="button" class="btn btn-default calbutton" data-toggle="datepicker"
+					data-target-name="sample-date">
+				<span class="fa fa-calendar"></span>
+			</button>
+			</span>
+    </div>
+</div>
+
+<div class="col-sm-6">
+	<p>
+	<a href="https://bootstrap-datepicker.readthedocs.io/en/stable/options.html">Documentation</a>
+	</p>
+</div>
+
+</div>
+    <script>		
+			$(function () {				
+				$("#money").decimal({isDecimal: false});				
+				$("#description").preventCharacter({ exclude: 39 });
+			    $(".description").autogrow({ minHeight : 150, maxHeight : 360 });
+				
+				$('.datepicker').datepicker({
+					format: 'mm/dd/yyyy',
+					endDate: "0d",
+					autoclose: true
+				}).on('changeDate', function(){
+					
+				});
+			});		
+    </script>
+</body>
+</html>
